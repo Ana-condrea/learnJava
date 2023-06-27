@@ -1,0 +1,17 @@
+apply plugin: 'java'
+apply plugin: 'jacoco'
+apply plugin: 'war'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    providedCompile 'jakarta.platform:jakarta.jakartaee-web-api:10.0.0'
+    
+    testImplementation     'junit:junit:4.13'
+    implementation group: 'org.hibernate', name: 'hibernate-gradle-plugin', version: '5.6.15.Final'
+    implementation 'mysql:mysql-connector-java:8.0.33'
+    implementation 'org.apache.commons:commons-lang3:3.12.0'
+
+}
